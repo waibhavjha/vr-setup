@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360-Degree View</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css">
+    <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+</head>
+<body>
+    <div id="panorama" style="width: 100%; height: 500px;"></div>
+
+    <script>
+        pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "/PhotoOxy.com_166b0c65ebca5f.jpg", // Replace with the actual image path
+            "autoLoad": true,
+            "yaw": 175, // Adjust starting point to center the image properly
+            "hfov": 110, // Adjust field of view
+            "minHfov": 50,
+            "maxHfov": 120,
+            "pitch": 0,
+            "showControls": true
+        });
+    </script>
+</body>
+</html>
